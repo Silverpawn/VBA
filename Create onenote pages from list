@@ -1,0 +1,336 @@
+'Creates a onenote file from list
+Sub OneNoteARRAYpageCreate()
+Dim MyArray(1 To 170) As Variant
+Dim PgNm As Variant
+
+
+MyArray(1) = 2014001
+MyArray(2) = 2014002
+MyArray(3) = 2014003
+MyArray(4) = 2014004
+MyArray(5) = 2014005
+MyArray(6) = 2014006
+MyArray(7) = 2014007
+MyArray(8) = 2014008
+MyArray(9) = 2014009
+MyArray(10) = 2014010
+MyArray(11) = 2014011
+MyArray(12) = 2014012
+MyArray(13) = 2014013
+MyArray(14) = 2014014
+MyArray(15) = 2014015
+MyArray(16) = 2014016
+MyArray(17) = 2014017
+MyArray(18) = 2014018
+MyArray(19) = 2014019
+MyArray(20) = 2014020
+MyArray(21) = 2014021
+MyArray(22) = 2014022
+MyArray(23) = 2014023
+MyArray(24) = 2014024
+MyArray(25) = 2014025
+MyArray(26) = 2014026
+MyArray(27) = 2014027
+MyArray(28) = 2014028
+MyArray(29) = 2014029
+MyArray(30) = 2014030
+MyArray(31) = 2014031
+MyArray(32) = 2014032
+MyArray(33) = 2014033
+MyArray(34) = 2014034
+MyArray(35) = 2014035
+MyArray(36) = 2014011
+MyArray(37) = 2014037
+MyArray(38) = 2014038
+MyArray(39) = 2014039
+MyArray(40) = 2014040
+MyArray(41) = 2014041
+MyArray(42) = 2014042
+MyArray(43) = 2014043
+MyArray(44) = 2014044
+MyArray(45) = 2014045
+MyArray(46) = 2014046
+MyArray(47) = 2014047
+MyArray(48) = 2014048
+MyArray(49) = 2014049
+MyArray(50) = 2014050
+MyArray(51) = 2014051
+MyArray(52) = 2014052
+MyArray(53) = 2014053
+MyArray(54) = 2014054
+MyArray(55) = 2014055
+MyArray(56) = 2014056
+MyArray(57) = 2014057
+MyArray(58) = 2014058
+MyArray(59) = 2014059
+MyArray(60) = 2014060
+MyArray(61) = 2014061
+MyArray(62) = 2014062
+MyArray(63) = 2014063
+MyArray(64) = 2014064
+MyArray(65) = 2014065
+MyArray(66) = 2014066
+MyArray(67) = 2014067
+MyArray(68) = 2014068
+MyArray(69) = 2014069
+MyArray(70) = 2015001
+MyArray(71) = 2015002
+MyArray(72) = 2015003
+MyArray(73) = 2015004
+MyArray(74) = 2015005
+MyArray(75) = 2015006
+MyArray(76) = 2015007
+MyArray(77) = 2015008
+MyArray(78) = 2015009
+MyArray(79) = 2015010
+MyArray(80) = 2015011
+MyArray(81) = 2015012
+MyArray(82) = 2015013
+MyArray(83) = 2015014
+MyArray(84) = 2015015
+MyArray(85) = 2015016
+MyArray(86) = 2015017
+MyArray(87) = 2015018
+MyArray(88) = 2015019
+MyArray(89) = 2015020
+MyArray(90) = 2015021
+MyArray(91) = 2015022
+MyArray(92) = 2015023
+MyArray(93) = 2015024
+MyArray(94) = 2015025
+MyArray(95) = 2015026
+MyArray(96) = 2015027
+MyArray(97) = 2015028
+MyArray(98) = 2015029
+MyArray(99) = 2015030
+MyArray(100) = 2015031
+MyArray(101) = 2015032
+MyArray(102) = 2015033
+MyArray(103) = 2015034
+MyArray(104) = 2015035
+MyArray(105) = 2015036
+MyArray(106) = 2015037
+MyArray(107) = 2015038
+MyArray(108) = 2015039
+MyArray(109) = 2015040
+MyArray(110) = 2015041
+MyArray(111) = 2015042
+MyArray(112) = 2015043
+MyArray(113) = 2015044
+MyArray(114) = 2015045
+MyArray(115) = 2015046
+MyArray(116) = 2015047
+MyArray(117) = 2015048
+MyArray(118) = 2015049
+MyArray(119) = 2015050
+MyArray(120) = 2015051
+MyArray(121) = 2015052
+MyArray(122) = 2015053
+MyArray(123) = 2015054
+MyArray(124) = 2015055
+MyArray(125) = 2015056
+MyArray(126) = 2015057
+MyArray(127) = 2015058
+MyArray(128) = 2015059
+MyArray(129) = 2015060
+MyArray(130) = 2015061
+MyArray(131) = 2015062
+MyArray(132) = 2015063
+MyArray(133) = 2015064
+MyArray(134) = 2015065
+MyArray(135) = 2015066
+MyArray(136) = 2015067
+MyArray(137) = 2015068
+MyArray(138) = 2015069
+MyArray(139) = 2015070
+MyArray(140) = 2015071
+MyArray(141) = 2015072
+MyArray(142) = 2015073
+MyArray(143) = 2015074
+MyArray(144) = 2015075
+MyArray(145) = 2015076
+MyArray(146) = 2015077
+MyArray(147) = 2015078
+MyArray(148) = 2015079
+MyArray(149) = 2015080
+MyArray(150) = 2015081
+MyArray(151) = 2015082
+MyArray(152) = 2015083
+MyArray(153) = 2015084
+MyArray(154) = 2016001
+MyArray(155) = 2016002
+MyArray(156) = 2016003
+MyArray(157) = 2016004
+MyArray(158) = 2016005
+MyArray(159) = 2016006
+MyArray(160) = 2016007
+MyArray(161) = 2016008
+MyArray(162) = 2016009
+MyArray(163) = 2016010
+MyArray(164) = 2016011
+MyArray(165) = 2016012
+MyArray(166) = 2016013
+MyArray(167) = 2016014
+MyArray(168) = 2016015
+MyArray(169) = 2016016
+MyArray(170) = 2016017
+
+For i = 1 To UBound(MyArray)
+
+PgNm = MyArray(i)
+
+Call CreateNewPage(PgNm)
+
+Next i
+End Sub
+
+Sub CreateNewPage(PgNm)
+    ' Connect to OneNote 2010.
+    ' OneNote will be started if it's not running
+    ' However, to see the results of the code,
+    ' you'll want to ensure the OneNote 2010 user
+    ' interface is visible.
+    Dim oneNote As OneNote14.Application
+    Set oneNote = New OneNote14.Application
+     
+    ' Get all of the Notebook nodes.
+    Dim nodes As MSXML2.IXMLDOMNodeList
+    Set nodes = GetFirstOneNoteNotebookNodes(oneNote)
+    If Not nodes Is Nothing Then
+        ' Get the first OneNote Notebook in the XML document.
+        Dim node As MSXML2.IXMLDOMNode
+        Set node = nodes(0)
+        Dim noteBookName As String
+        noteBookName = node.Attributes.getNamedItem("name").Text
+         
+        ' Get the ID for the Notebook so the code can retrieve
+        ' the list of sections.
+        Dim notebookID As String
+        notebookID = node.Attributes.getNamedItem("ID").Text
+         
+        ' Load the XML for the Sections for the Notebook requested.
+        Dim sectionsXml As String
+        oneNote.GetHierarchy notebookID, hsSections, sectionsXml, xs2010
+         
+        Dim secDoc As MSXML2.DOMDocument
+        Set secDoc = New MSXML2.DOMDocument
+     
+        If secDoc.LoadXML(sectionsXml) Then
+            ' select the Section nodes
+            Dim secNodes As MSXML2.IXMLDOMNodeList
+            Set secNodes = secDoc.DocumentElement.SelectNodes("//one:Section")
+             
+            If Not secNodes Is Nothing Then
+                ' Get the first section.
+                Dim secNode As MSXML2.IXMLDOMNode
+                Set secNode = secNodes(0)
+                 
+                Dim sectionName As String
+                sectionName = secNode.Attributes.getNamedItem("name").Text
+                Dim sectionID As String
+                sectionID = secNode.Attributes.getNamedItem("ID").Text
+                 
+                ' Create a new blank Page in the first Section
+                ' using the default format.
+                Dim newPageID As String
+                oneNote.CreateNewPage sectionID, newPageID, npsDefault
+                 
+                ' Get the contents of the page.
+                Dim outXML As String
+                oneNote.GetPageContent newPageID, outXML, piAll, xs2010
+                 
+                Dim doc As MSXML2.DOMDocument
+                Set doc = New MSXML2.DOMDocument
+                ' Load Page's XML into a MSXML2.DOMDocument object.
+                If doc.LoadXML(outXML) Then
+                    ' Get Page Node.
+                    Dim pageNode As MSXML2.IXMLDOMNode
+                    Set pageNode = doc.SelectSingleNode("//one:Page")
+ 
+                    ' Find the Title element.
+                    Dim titleNode As MSXML2.IXMLDOMNode
+                    Set titleNode = doc.SelectSingleNode("//one:Page/one:Title/one:OE/one:T")
+                     
+                    ' Get the CDataSection where OneNote store's the Title's text.
+                    Dim cdataChild As MSXML2.IXMLDOMNode
+                    Set cdataChild = titleNode.SelectSingleNode("text()")
+                     
+                    ' Change the title in the local XML copy.
+                    cdataChild.Text = PgNm
+                    ' Write the update to OneNote.
+                    oneNote.UpdatePageContent doc.XML
+                     
+                    Dim newElement As MSXML2.IXMLDOMElement
+                    Dim newNode As MSXML2.IXMLDOMNode
+                     
+                    ' Create Outline node.
+                    Set newElement = doc.createElement("one:Outline")
+                    Set newNode = pageNode.appendChild(newElement)
+                    ' Create OEChildren.
+                    Set newElement = doc.createElement("one:OEChildren")
+                    Set newNode = newNode.appendChild(newElement)
+                    ' Create OE.
+                    Set newElement = doc.createElement("one:OE")
+                    Set newNode = newNode.appendChild(newElement)
+                    ' Create TE.
+                    Set newElement = doc.createElement("one:T")
+                    Set newNode = newNode.appendChild(newElement)
+                     
+                    ' Add the text for the Page's content.
+                    Dim cd As MSXML2.IXMLDOMCDATASection
+                    Set cd = doc.createCDATASection("Text added to a new OneNote page via VBA.")
+ 
+                    newNode.appendChild cd
+                  
+                     
+                    ' Update OneNote with the new content.
+                    oneNote.UpdatePageContent doc.XML
+                     
+                    ' Print out information about the update.
+                    Debug.Print "A new page was created in "
+                    Debug.Print "Section " & sectionName & " in"
+                    Debug.Print "Notebook " & noteBookName & "."
+                    Debug.Print "Contents of new Page:"
+                     
+                    Debug.Print doc.XML
+                End If
+            Else
+                MsgBox "OneNote 2010 Section nodes not found."
+            End If
+        Else
+            MsgBox "OneNote 2010 Section XML Data failed to load."
+        End If
+    Else
+        MsgBox "OneNote 2010 XML Data failed to load."
+    End If
+     
+End Sub
+ 
+Private Function GetAttributeValueFromNode(node As MSXML2.IXMLDOMNode, attributeName As String) As String
+    If node.Attributes.getNamedItem(attributeName) Is Nothing Then
+        GetAttributeValueFromNode = "Not found."
+    Else
+        GetAttributeValueFromNode = node.Attributes.getNamedItem(attributeName).Text
+    End If
+End Function
+ 
+Private Function GetFirstOneNoteNotebookNodes(oneNote As OneNote14.Application) As MSXML2.IXMLDOMNodeList
+    ' Get the XML that represents the OneNote notebooks available.
+    Dim notebookXml As String
+    ' OneNote fills notebookXml with an XML document providing information
+    ' about what OneNote notebooks are available.
+    ' You want all the data and thus are providing an empty string
+    ' for the bstrStartNodeID parameter.
+    oneNote.GetHierarchy "", hsNotebooks, notebookXml, xs2010
+     
+    ' Use the MSXML Library to parse the XML.
+    Dim doc As MSXML2.DOMDocument
+    Set doc = New MSXML2.DOMDocument
+     
+    If doc.LoadXML(notebookXml) Then
+        Set GetFirstOneNoteNotebookNodes = doc.DocumentElement.SelectNodes("//one:Notebook")
+    Else
+        Set GetFirstOneNoteNotebookNodes = Nothing
+    End If
+
+End Function
