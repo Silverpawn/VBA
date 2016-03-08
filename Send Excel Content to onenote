@@ -1,0 +1,59 @@
+Sub PushExcelContentToOneNote()
+'*******************************************************************************
+' Description:  This will take the selected content and print it to OneNote, then
+'               reset the printer back to the original printer prior to the routine.
+'
+' Author:       Scott Lyerly
+' Contact:      scott_lyerly@tjx.com, or scott.c.lyerly@gmail.com
+'
+' Name:                             Date:           Init:   Modification:
+' PushExcelContentToOneNote V1      21-MAR-2014     SCL     Original development
+'
+' Arguments:    None
+'
+' Returns:      None
+'*******************************************************************************
+On Error GoTo ErrHandler
+    ' Constant declaratios.
+    Const sONENOTE_PRINTER      As String = "Send To OneNote 2010 on nul:"
+    ' Variable declarations.
+    Dim sOriginalPrinter        As String
+    ' Get the original printer first.
+    sOriginalPrinter = Application.ActivePrinter
+    ' Make sure One Note is the active printer.
+    Application.ActivePrinter = sONENOTE_PRINTER
+        
+    ' Print to OneNote
+    Selection.PrintOut Copies:=1, Collate:=True, IgnorePrintAreas:=False
+        
+    ' Reset the original printer.
+    Application.ActivePrinter = sOriginalPrinter
+    
+Exit_Clean:
+    
+    Exit Sub
+    
+ErrHandler:
+    
+    ' Since the 1004 error number is too broad, we'll check the error description instead.
+    If InStr(Err.Description, "ActivePrinter") 0 Then
+        MsgBox "Excel cannot find the OneNote printer on your machine." & _
+               vbNewLine & vbNewLine & _
+               "Operation cancelled.", _
+               vbOKOnly + vbExclamation, "PRINTER ERROR"
+    Else
+        MsgBox Err.Number & ": " & Err.Description, vbCritical, "MICROSOFT ERROR"
+    End If
+    
+    Resume Exit_Clean
+        
+End Sub
+
+
+
+Private Sub Workbook_BeforeClose(Cancel As Boolean)
+    Application.OnKey "^+n", ""
+End Sub
+Private Sub Workbook_Open()
+    Application.OnKey "^+n", "PushExcelContentToOneNote"
+End Sub
